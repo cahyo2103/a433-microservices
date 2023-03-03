@@ -1,0 +1,36 @@
+version: "3.7"
+
+
+services:
+
+  item-app:
+
+    image: item-app:v1
+
+    command: sh -c "yarn install && yarn run dev"
+
+    ports:
+
+      - 8080
+
+
+
+
+  item-db:
+
+    image: mongo:3
+
+    volumes:
+
+      - app-db:/data/db
+
+    environment:
+
+      MYSQL_ROOT_PASSWORD: dicoding
+
+      MYSQL_DATABASE: item-db
+
+
+volumes:
+
+  app-db:
