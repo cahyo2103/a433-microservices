@@ -3,17 +3,17 @@ version: "3.7"
 
 services:
 
+    depends_on:
+      - item-db
+      - item-app
+
   item-app:
 
-    image: item-app:v1
-
-    command: sh -c "yarn install && yarn run dev"
+    image: cahyogusti/item-app:v1
 
     ports:
 
-      - 8080
-
-
+      - 8080:80
 
 
   item-db:
@@ -24,11 +24,6 @@ services:
 
       - app-db:/data/db
 
-    environment:
-
-      MYSQL_ROOT_PASSWORD: dicoding
-
-      MYSQL_DATABASE: item-db
 
 
 volumes:
