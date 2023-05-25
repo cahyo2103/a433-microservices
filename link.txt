@@ -1,0 +1,5 @@
+Link Github : 
+https://github.com/cahyo2103/a433-microservices/tree/proyek-pertama
+
+Link Dockerhub:
+https://hub.docker.com/repository/docker/cahyogusti/item-app/general
