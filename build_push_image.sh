@@ -12,6 +12,6 @@ docker tag item-app:v1 cahyogusti/item-app:v1
 docker login
 
 #Mengunggah image ke Docker Hub
-sudo docker push cahyogusti/item-app:v1
+docker push cahyogusti/item-app:v1
 
 
