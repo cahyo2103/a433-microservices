@@ -10,6 +10,7 @@ COPY . .
 #menambahkan environment variable
 ENV NODE_ENV=production DB_HOST=item-db
 
+RUN rm -rf /usr/src/app/node_modules
 # run sebagai root, install dev dependensi, build
 RUN npm install --production --unsafe-perm && npm run build
 
