@@ -8,24 +8,24 @@ services:
       - item-app
 
   item-app:
-
+    container_name: item-app
     image: cahyogusti/item-app:v1
-
     ports:
-
-      - 8080:80
-
+        - "80:8080"
+   
+    
 
   item-db:
 
+    container_name: item-db
     image: mongo:3
-
+    ports: 
+        - "27017:27017"
     volumes:
-
-      - app-db:/data/db
-
+      - "app-db:/data/db"
 
 
 volumes:
 
   app-db:
+      name: app-db
