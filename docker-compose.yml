@@ -3,15 +3,16 @@ version: "3.7"
 
 services:
 
-    
+    depends_on:
+      - item-db
+      - item-app
 
   item-app:
     container_name: item-app
     image: cahyogusti/item-app:v1
     ports:
         - "80:8080"
-    depends_on:
-      - item-db
+    
    
     
 
