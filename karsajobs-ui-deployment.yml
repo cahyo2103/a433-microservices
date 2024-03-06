@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: karajobs-frontend
+
+spec:
+
+  replicas: 2
+
+  selector:
+
+    matchLabels:
+
+      app: frontend
+
+  template: 
+
+    metadata: 
+
+      labels:
+
+        app: frontend
+
+    spec:
+
+      containers:
+
+      - name: karsajobs-ui
+
+        image: cahyogusti/karsajobs-ui:latest
+
+        imagePullPolicy: Always
+
+        ports:
+
+        - containerPort: 8000
+
+        env:
+
+        - name: VUE_APP_BACKEND 
+
+          value: 'http://172.18.100.102:30003'

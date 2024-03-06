@@ -8,6 +8,6 @@ docker images
 docker login
 
 #Mengunggah image ke Docker Hub
-docker push cahyogusti/karsajob-ui:latest
+docker push cahyogusti/karsajobs-ui:latest
 
 
